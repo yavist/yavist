@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+		<div class="wrap">
+			<br></br><br></br>
+			<header class="centeredH">
+				<h1>Kapitel 1</h1>
+			</header>
+			<br></br>
+			<main class="centered">
+				<article>
+					<section>
+						
+<form>
+  <label for="choose">Wann wurde Kari geboren?</label>
+  <input id="choose" name="Choose" type="choose"required pattern="test" oninput ="checkPasscode();" placeholder="Lösungswort">
+  
+</form>
+					</section>
+					
+					<br></br>
+					<div id = "loesung" class="col text-center">
+						<a><button type="button" class="btn btn-secondary" onclick="relocate_home()">Material holen</button></a>
+						</div>
+						<br></br>
+				</article>
+			</main>
+			<script>
+	function relocate_home()
+	{
+     location.href = "resources/mask.pdf";
+	} 
+	</script>
+	<script> 
+     function checkPasscode() {
+	var passcode_input = document.querySelector("#choose");
+	
+	if (passcode_input.value != "14.11.1994") {
+		passcode_input.setCustomValidity("Falsch. Versucht es weiter.");
+	} else {
+		passcode_input.setCustomValidity(""); // be sure to leave this empty!
+		document.getElementById("loesung").style.visibility = "visible";
+	}
+}
+
+        </script> 
+
+			<footer>
+				Hier kann Text stehen.
+			</footer>
+		</div>
+    </body>
+</html>
