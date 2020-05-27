@@ -1,0 +1,108 @@
+html{
+cursor:none;
+padding:0;
+margin:0;
+overflow: visible;
+}
+iframe{
+position:absolute;
+left:-50%;
+top:-50%;
+height:200%;
+width:200%;
+-webkit-filter:sepia(100%) hue-rotate(150deg);
+-webkit-animation:mapa 20s infinite ease-out;
+-moz-animation:mapa 20s infinite ease-out;
+-ms-animation:mapa 20s infinite ease-out;
+-o-animation:mapa 20s infinite ease-out;
+animation:mapa 20s infinite ease-out;
+}
+
+#myVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (min-aspect-ratio: 16/9) {
+  #myVideo {
+    height: 200%; top: -50%;
+    /* or height: 200%; top: -50%;
+       or height: 400%; top: -150%; */
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  #myVideo {
+    width: 300%; left: -100%;
+    /* or width: 200%; left: -50%;
+       or width: 400%; left: -150%; */
+  }
+}
+
+.back:before{
+content:"";
+left:0;
+top:0;
+position:absolute;
+height:100%;
+width:100%;
+background-image:linear-gradient(rgba(0,0,0,0) 3px, rgba(0,0,0,.3) 3px);
+-webkit-background-size:1px 6px;
+-moz-background-size:1px 6px;
+-o-background-size:1px 6px;
+background-size:1px 6px;
+}
+#spy{
+position:absolute;
+height:100px;
+width:100px;
+filter:drop-shadow(0px 0px 5px rgba(31, 240, 66, 0.75));
+
+background:url(sucher.svg) center;
+-webkit-background-size:100px;
+-moz-background-size:100px;
+-o-background-size:100px;
+background-size:100px;
+
+z-index:2;
+
+}
+#spy:after{
+content:"";
+top:0px;
+left:0px;
+position:absolute;
+width:200px;
+height:200px;
+
+}
+
+
+#spy:active{
+-webkit-transform:scale(1.2);
+-moz-transform:scale(1.2);
+-ms-transform:scale(1.2);
+-o-transform:scale(1.2);
+transform:scale(1.2);
+}
+#compass{
+position:absolute;
+bottom:50px;
+left:50%;
+margin-left:-150px;
+background:url("http://www.clker.com/cliparts/e/1/e/f/12078862622125082831ipurush_Compass.svg") center no-repeat;
+-webkit-background-size:300px;
+-moz-background-size:300px;
+-o-background-size:300px;
+background-size:300px;
+-webkit-filter:invert(1) drop-shadow(5px 5px 20px black);
+z-index:1;
+width:300px;
+height:300px;
+-webkit-animation:mapa 20s infinite ease-out;
+-moz-animation:mapa 20s infinite ease-out;
+-ms-animation:mapa 20s infinite ease-out;
+-o-animation:mapa 20s infinite ease-out;
+animation:mapa 20s infinite ease-out;
+}
